@@ -4,76 +4,41 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-amber-50">
-      {/* Textura de papel envelhecido como fundo */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+PC9zdmc+')] opacity-20" />
-      
-      {/* Container principal com estilo de caderno */}
-      <div className="relative w-full max-w-2xl mx-auto p-6">
-        <Card className="bg-amber-50/90 border-amber-200 shadow-lg rounded-2xl overflow-hidden">
-          {/* Cabeçalho com título medieval */}
-          <CardHeader className="text-center py-8 border-b border-amber-200">
-            <CardTitle className="text-4xl md:text-5xl font-bold text-amber-800 tracking-wider">
-              Cardápio do Dia
-            </CardTitle>
-            <p className="text-amber-600 mt-2 text-lg">Cozinha caseira e artesanal</p>
-          </CardHeader>
-          
-          {/* Conteúdo do cardápio */}
-          <CardContent className="py-6">
-            <div className="space-y-4">
-              {/* Seção de pratos principais */}
-              <div className="border-l-4 border-amber-600 pl-4">
-                <h3 className="text-xl font-semibold text-amber-800 mb-3">Pratos Principais</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 bg-amber-100/50 rounded-lg">
-                    <span className="text-amber-900 font-medium">Sopa de Legumes</span>
-                    <span className="text-amber-700 font-bold">R$ 25,00</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-amber-100/50 rounded-lg">
-                    <span className="text-amber-900 font-medium">Pizza de Queijo</span>
-                    <span className="text-amber-700 font-bold">R$ 35,00</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-amber-100/50 rounded-lg">
-                    <span className="text-amber-900 font-medium">Strogonoff de Carne</span>
-                    <span className="text-amber-700 font-bold">R$ 45,00</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Seção de sobremesas */}
-              <div className="border-l-4 border-amber-600 pl-4 mt-6">
-                <h3 className="text-xl font-semibold text-amber-800 mb-3">Sobremesas</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 bg-amber-100/50 rounded-lg">
-                    <span className="text-amber-900 font-medium">Sorvete de Morango</span>
-                    <span className="text-amber-700 font-bold">R$ 15,00</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-amber-100/50 rounded-lg">
-                    <span className="text-amber-900 font-medium">Bolo de Chocolate</span>
-                    <span className="text-amber-700 font-bold">R$ 20,00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-          
-          {/* Rodapé com botões */}
-          <CardFooter className="flex flex-col sm:flex-row gap-4 justify-center pb-8 pt-6 border-t border-amber-200">
-            <Button
-              className="w-full sm:w-auto px-8 py-3 bg-amber-700 text-white rounded-full font-medium hover:bg-amber-800 transition-all shadow-md"
-            >
-              Enviar Pedido
-            </Button>
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto px-8 py-3 border-amber-600 text-amber-700 rounded-full font-medium hover:bg-amber-100 transition-all"
-            >
-              Ver Cardápio Completo
-            </Button>
-          </CardFooter>
-        </Card>
-      </div>
+    <div className="relative min-h-screen flex items-center justify-center bg-gray-100">
+      {/* Background image with subtle overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/reference.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-200/30 via-blue-300/30 to-blue-400/30" />
+
+      {/* Central card with Frutiger‑Aero styling */}
+      <Card className="relative w-full max-w-lg bg-white/80 backdrop-blur-xl rounded-[2rem] border border-white/30 shadow-2xl">
+        <CardHeader className="text-center pt-8">
+          <CardTitle className="text-4xl md:text-5xl font-light text-blue-600 tracking-tight">
+            Olá IA
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="px-8 text-center">
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Bem‑vindo à sua aplicação! Esta página foi inspirada na imagem de referência,
+            combinando o estilo Frutiger Aero com cores suaves e elementos modernos.
+          </p>
+        </CardContent>
+        <CardFooter className="flex flex-col sm:flex-row gap-4 justify-center pb-8">
+          <Button
+            className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-all"
+          >
+            Começar
+          </Button>
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-all"
+          >
+            Saiba Mais
+          </Button>
+        </CardFooter>
+      </Card>
 
       <MadeWithDyad className="absolute bottom-4 left-1/2 -translate-x-1/2" />
     </div>
